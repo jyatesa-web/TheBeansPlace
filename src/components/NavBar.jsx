@@ -146,7 +146,41 @@ export default function NavBar() {
              </div>
              
              {/* Mobile Menu */}
-             
+             <AnimatePresence>
+                { menuOpen && (
+                    <motion.div
+                        className="overflow-hidden md: hidden"
+                        initial={{ height: 0, opacity: 0}}
+                        animate={{ height: "auto", opacity: 1}}
+                        exit={{ height: 0, opacity: 0}}
+                        transition={{duration: 0.3, ease: "easeInOut"}}
+                    >
+                        <nav className="flex flex-col gap-4 px-6 pb-6 pt-2">
+                            <a href="#home" onClick={closeMenu} className="text-base font-semibold">
+                            Home
+                            </a>
+                            <a href="#shop" onClick={closeMenu} className="text-base font-semi-bole">
+                                Shop Coffee
+                            </a>
+                            <a href="#about" onClick={closeMenu} className="text-base font-semibold">
+                                Our Story
+                            </a>
+                            <a href="contact" onClick={closeMenu} className="text-base font-semibold">
+                              Contact  
+                            </a>
+                            
+                            <Button
+                            variant="accent"
+                            size="sm"
+                            className="mt-2 w-full"
+                            onClick={closeMenu}
+                            >
+                                Order Now
+                            </Button>
+                        </nav>
+                    </motion.div>
+                )}
+             </AnimatePresence>
              
              
         </motion.header>
