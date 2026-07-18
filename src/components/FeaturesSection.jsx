@@ -206,4 +206,8 @@ export default function FeaturesSection(){
         return () => window.removeEventListener("scroll", handleScroll)
     }, [] );
     
+    return (
+        
+    );
+    
 }
