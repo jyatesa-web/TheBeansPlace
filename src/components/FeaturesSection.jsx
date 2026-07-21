@@ -48,7 +48,7 @@ import imgJamaicanBlueMountain from "../assets/Jamaican-Blue-Mountain-Bag.png";
 import imgColombianSupremo from "../assets/Colombian-Supremo-Bag.png";
 import imgEthiopianHarrar from "../assets/Ethiopian-Harrar-Bag.png";
 import imgArabianMocha from "../assets/Arabian-Mocha-Bag.png";
-
+ 
 // STEP 2: Define three row arrays (outside the component)
 // Each row contains the same images but in different orders.
 // This creates visual variety in the carousel.
@@ -162,7 +162,7 @@ function ImageRow({ images, offset = 0 }) {
     const doubled = [...images, ...images];
 
     return (
-        <div className="carousel-row" style={{ transform: `translate3d (${offset}px, 0, 0)` }}>
+        <div className="carousel-row" style={{ transform: `translate3d(${offset}px, 0, 0)` }}>
             {doubled.map((src, index) => (
                 <div className="carousel-card" key={`${index}`}>
                     <img
@@ -193,8 +193,8 @@ export default function FeaturesSection(){
             const p = Math.max(0, Math.min( 1, progress));
             
             //Each row moves at different speeds/ directions based on scroll progress
-            //scale range to viewport width so it works on all screnn sizes
-            const range = Math.min( window.innerHeight * 0.5, 600);
+            //scale range to viewport width so it works on all screen sizes
+            const range = Math.min( window.innerWidth * 0.5, 600);
             setOffsets( [
                 -p * range, // row 1: slides left
                 p * range - range, // row 2: slides right (starts offset left)
@@ -207,6 +207,13 @@ export default function FeaturesSection(){
     }, [] );
     
     return (
+        <section className="carousel-gallery-section" ref={sectionRef}>
+            <div className="carousel-gallery-container">
+                <ImageRow images={row1} offset={offsets[0]}/>
+                <ImageRow images={row2} offset={offsets[1]}/> 
+                <ImageRow images={row3} offset={offsets[2]}/>
+            </div>
+        </section>
         
     );
     
