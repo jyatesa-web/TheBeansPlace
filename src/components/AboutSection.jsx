@@ -148,7 +148,7 @@ export default function AboutSection() {
 
                     <p className="about-body lead--light">
                         Every week, our roastmaster cups dozens of samples to select only the lots
-                        that meet our standard. Whether you prefer a bright, fruity Ethiopean
+                        that meet our standard. Whether you prefer a bright, fruity Ethiopian
                         Yirgacheffe or a deep, chocolately Colombian Supremo, we roast each batch to
                         order so it arrives at peak freshness.
                     </p>
