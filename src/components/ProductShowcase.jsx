@@ -158,7 +158,7 @@ const products = [
         badge: null
     },
     {
-        name: "Guatemal Antigua",
+        name: "Guatemala Antigua",
         origin: "Guatemala",
         price: "$17.99",
         roast: "Dark",
