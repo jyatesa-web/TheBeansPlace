@@ -140,7 +140,7 @@ export default function AboutSection() {
             <div className="about-story-grid">
                 <ScrollReveal animation="fadeLeft" className="about-story-text">
                     <p className="about-body lead--light">
-                        The Beans Place started in 2012 with one simple belif; great coffee should
+                        The Beans Place started in 2012 with one simple belief; great coffee should
                         be accessible to everyone- not just aficianados. We work directly with
                         farming cooperatives across four continents, paying above fair-trade prices
                         to ensure quality from soil to sip.
